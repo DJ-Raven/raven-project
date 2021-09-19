@@ -19,7 +19,7 @@ public class Test extends javax.swing.JFrame {
     public Test() {
         initComponents();
         getContentPane().setBackground(new Color(250, 250, 250));
-    }
+            }
 
     /**
      * This method is called from within the constructor to initialize the form.
