@@ -5,6 +5,8 @@
  */
 package checkbox;
 
+import java.awt.Color;
+
 /**
  *
  * @author RAVEN
@@ -16,6 +18,7 @@ public class Test extends javax.swing.JFrame {
      */
     public Test() {
         initComponents();
+        getContentPane().setBackground(new Color(245, 245, 245));
     }
 
     /**
@@ -27,17 +30,57 @@ public class Test extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jCheckBoxCustom1 = new checkbox.JCheckBoxCustom();
+        jCheckBoxCustom2 = new checkbox.JCheckBoxCustom();
+        jCheckBoxCustom3 = new checkbox.JCheckBoxCustom();
+        jCheckBoxCustom4 = new checkbox.JCheckBoxCustom();
+        jCheckBoxCustom5 = new checkbox.JCheckBoxCustom();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jCheckBoxCustom1.setText("jCheckBoxCustom1");
+
+        jCheckBoxCustom2.setBackground(new java.awt.Color(231, 49, 32));
+        jCheckBoxCustom2.setText("jCheckBoxCustom1");
+
+        jCheckBoxCustom3.setBackground(new java.awt.Color(255, 102, 0));
+        jCheckBoxCustom3.setText("jCheckBoxCustom1");
+
+        jCheckBoxCustom4.setBackground(new java.awt.Color(21, 129, 28));
+        jCheckBoxCustom4.setText("jCheckBoxCustom1");
+
+        jCheckBoxCustom5.setSelected(true);
+        jCheckBoxCustom5.setText("jCheckBoxCustom1");
+        jCheckBoxCustom5.setEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 780, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(219, 219, 219)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jCheckBoxCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBoxCustom2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBoxCustom3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBoxCustom4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBoxCustom5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(430, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 495, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(144, 144, 144)
+                .addComponent(jCheckBoxCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jCheckBoxCustom2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jCheckBoxCustom3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jCheckBoxCustom4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jCheckBoxCustom5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(189, Short.MAX_VALUE))
         );
 
         pack();
@@ -80,5 +123,10 @@ public class Test extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private checkbox.JCheckBoxCustom jCheckBoxCustom1;
+    private checkbox.JCheckBoxCustom jCheckBoxCustom2;
+    private checkbox.JCheckBoxCustom jCheckBoxCustom3;
+    private checkbox.JCheckBoxCustom jCheckBoxCustom4;
+    private checkbox.JCheckBoxCustom jCheckBoxCustom5;
     // End of variables declaration//GEN-END:variables
 }
