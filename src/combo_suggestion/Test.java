@@ -19,6 +19,9 @@ public class Test extends javax.swing.JFrame {
     public Test() {
         initComponents();
         getContentPane().setBackground(new Color(255, 255, 255));
+        for(int i=0;i<100;i++){
+            comboBoxSuggestion1.addItem("dfgd"+i);
+        }
     }
 
     /**
