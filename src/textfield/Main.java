@@ -44,6 +44,7 @@ public class Main extends javax.swing.JFrame {
         passwordField1.setLabelText("Password");
 
         passwordField2.setLabelText("Confirm Password");
+        passwordField2.setShowAndHide(true);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

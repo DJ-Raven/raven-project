@@ -70,6 +70,7 @@
     <Component class="textfield.PasswordField" name="passwordField2">
       <Properties>
         <Property name="labelText" type="java.lang.String" value="Confirm Password"/>
+        <Property name="showAndHide" type="boolean" value="true"/>
       </Properties>
     </Component>
   </SubComponents>
