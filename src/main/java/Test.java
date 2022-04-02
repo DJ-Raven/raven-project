@@ -2,6 +2,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -33,6 +35,8 @@ import textfield_suggestion.TextFieldSuggestion;
 
 public class Test extends javax.swing.JFrame {
 
+	private static Spinner spinner1;
+
 	private JCheckBoxCustom jCheckBoxCustom1;
 
 	private JCheckBoxCustom jCheckBoxCustom2;
@@ -56,15 +60,24 @@ public class Test extends javax.swing.JFrame {
 	}
 
 	public DefaultTableModel getSubTableData() {
+
 		DefaultTableModel data = new DefaultTableModel();
+
 		data.setColumnCount(4);
+
 		data.addRow(new Object[] { new Header("No", 10), new Header("Item"), new Header("Total", 200),
 				new Header("Detail", 200) });
+
 		data.addRow(new Object[] { 1, "ABC", "$ 50", getSubTableData1() });
+
 		data.addRow(new Object[] { 1, "Vital", "$ 70", getSubTableData1() });
+
 		data.addRow(new Object[] { 1, "Fanta", "$ 20", getSubTableData1() });
+
 		data.addRow(new Object[] { 1, "Coca", getSubTableData1(), getSubTableData1() });
+
 		return data;
+
 	}
 
 	public DefaultTableModel getSubTableData1() {
@@ -80,6 +93,38 @@ public class Test extends javax.swing.JFrame {
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 
 	private void initComponents() {
+
+		spinner1 = new Spinner();
+
+		spinner1.setEditable(true);
+
+		spinner1.setNegativo(false);
+
+		spinner1.setPonerMinvalor(true);
+
+		spinner1.setMinValor(-1);
+
+		spinner1.setPonerMaxvalor(true);
+
+		spinner1.setMaxValor(10);
+
+		spinner1.getEditor().addKeyListener(new KeyAdapter() {
+
+			@Override
+
+			public void keyReleased(KeyEvent e) {
+
+				// You can change the number of the spinner and put the filter
+
+				// so that you can put integers greater than or equal to zero
+
+				spinner1.ponerFiltro();
+
+			}
+
+		});
+
+		spinner1.setLabelText("Spinner Test");
 
 		jCheckBoxCustom1 = new checkbox.JCheckBoxCustom();
 
@@ -98,20 +143,27 @@ public class Test extends javax.swing.JFrame {
 		jCheckBoxCustom1.setText("jCheckBoxCustom1");
 
 		jCheckBoxCustom2.setBackground(new java.awt.Color(231, 49, 32));
+
 		jCheckBoxCustom2.setText("jCheckBoxCustom1");
 
 		jCheckBoxCustom3.setBackground(new java.awt.Color(255, 102, 0));
+
 		jCheckBoxCustom3.setText("jCheckBoxCustom1");
 
 		jCheckBoxCustom4.setBackground(new java.awt.Color(21, 129, 28));
+
 		jCheckBoxCustom4.setText("jCheckBoxCustom1");
 
 		jCheckBoxCustom5.setSelected(true);
+
 		jCheckBoxCustom5.setText("jCheckBoxCustom1");
+
 		jCheckBoxCustom5.setEnabled(false);
 
 		ComboBoxSuggestion<Object> comboBoxSuggestion2 = new ComboBoxSuggestion<Object>();
+
 		comboBoxSuggestion2.setEditable(false);
+
 		comboBoxSuggestion2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Afghanistan", "Albania",
 				"Algeria", "Andorra", "Angola", "Antarctica", "Antigua and Barbuda", "Argentina", "Armenia", "Aruba",
 				"Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus",
@@ -217,6 +269,7 @@ public class Test extends javax.swing.JFrame {
 		radioButtonCustom4.setEnabled(false);
 
 		ScrollBarCustom scrollBarCustom1 = new ScrollBarCustom();
+
 		scrollBarCustom1.setOrientation(JScrollBar.HORIZONTAL);
 
 		scrollBarCustom1.setOrientation(javax.swing.JScrollBar.HORIZONTAL);
@@ -226,6 +279,7 @@ public class Test extends javax.swing.JFrame {
 		vertical.setForeground(new java.awt.Color(170, 83, 242));
 
 		JScrollPane scroll = new JScrollPane();
+
 		scroll.setBorder(null);
 
 		JsliderCustom jsliderCustom1 = new JsliderCustom();
@@ -259,25 +313,27 @@ public class Test extends javax.swing.JFrame {
 		slider_material.JsliderCustom slider_percent_3 = new slider_material.JsliderCustom();
 
 		slider_percent_1.setBackground(new java.awt.Color(103, 88, 230));
+
 		slider_percent_1.setForeground(new java.awt.Color(103, 88, 230));
 
 		slider_percent_2.setBackground(new java.awt.Color(61, 175, 85));
+
 		slider_percent_2.setForeground(new java.awt.Color(61, 175, 85));
 
 		slider_percent_3.setBackground(new java.awt.Color(59, 142, 206));
+
 		slider_percent_3.setForeground(new java.awt.Color(59, 142, 206));
 
 		slider_percent_4.setBackground(new java.awt.Color(241, 79, 107));
+
 		slider_percent_4.setForeground(new java.awt.Color(115, 118, 120));
-
-		Spinner spinner1 = new Spinner();
-
-		spinner1.setLabelText("Spinner Test");
 
 		TextImage textImage1 = new TextImage();
 
 		textImage1.setText("HeLLO JAVA");
+
 		textImage1.setFont(new java.awt.Font("Algerian", 1, 50));
+
 		textImage1.setTextImage(new javax.swing.ImageIcon(getClass().getResource("/images/image1.jpg")));
 
 		TextAreaScroll textAreaScroll1 = new TextAreaScroll();

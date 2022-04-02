@@ -1,6 +1,8 @@
 
 # Pack JMaterialDesign - Raven's Design
 
+## Spinner: Set Min and Max value
+
 ![Preview](previews/preview.png)
 
 ![Preview](previews/preview_2.png)
