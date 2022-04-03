@@ -102,7 +102,9 @@ public class Test extends javax.swing.JFrame {
 
 		spinner1.setPonerMinvalor(true);
 
-		spinner1.setMinValor(-1);
+		spinner1.setValue(1);
+
+		spinner1.setMinValor(1);
 
 		spinner1.setPonerMaxvalor(true);
 
