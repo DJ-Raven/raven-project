@@ -3,6 +3,8 @@
 
 ## Spinner: Set Min and Max value
 
+## Spinner: Set Increment value
+
 ![Preview](previews/preview.png)
 
 ![Preview](previews/preview_2.png)

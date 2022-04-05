@@ -37,6 +37,8 @@ public class Test extends javax.swing.JFrame {
 
 	private static Spinner spinner1;
 
+	private static Spinner spinner1_1;
+
 	private JCheckBoxCustom jCheckBoxCustom1;
 
 	private JCheckBoxCustom jCheckBoxCustom2;
@@ -96,19 +98,17 @@ public class Test extends javax.swing.JFrame {
 
 		spinner1 = new Spinner();
 
-		spinner1.setEditable(true);
+		spinner1.setLabelText("Spinner Test");
 
-		spinner1.setNegativo(false);
-
-		spinner1.setPonerMinvalor(true);
-
-		spinner1.setValue(1);
-
-		spinner1.setMinValor(1);
-
-		spinner1.setPonerMaxvalor(true);
-
-		spinner1.setMaxValor(10);
+//		spinner1.setPonerMinvalor(true);
+//
+//		spinner1.setValue(1);
+//
+//		spinner1.setMinValor(1);
+//
+//		spinner1.setPonerMaxvalor(true);
+//
+//		spinner1.setMaxValor(10);
 
 		spinner1.getEditor().addKeyListener(new KeyAdapter() {
 
@@ -126,7 +126,21 @@ public class Test extends javax.swing.JFrame {
 
 		});
 
-		spinner1.setLabelText("Spinner Test");
+		spinner1_1 = new Spinner(true, true, false, 1, 10, 2);
+
+		spinner1_1.setValue(1);
+
+		spinner1_1.getEditor().addKeyListener(new KeyAdapter() {
+
+			@Override
+
+			public void keyReleased(KeyEvent e) {
+
+				spinner1_1.ponerFiltro();
+
+			}
+
+		});
 
 		jCheckBoxCustom1 = new checkbox.JCheckBoxCustom();
 
@@ -512,11 +526,16 @@ public class Test extends javax.swing.JFrame {
 																.addPreferredGap(ComponentPlacement.RELATED, 204,
 																		Short.MAX_VALUE))))
 												.addGroup(layout.createSequentialGroup()
-														.addComponent(radioButtonCustom3, GroupLayout.PREFERRED_SIZE,
-																139, GroupLayout.PREFERRED_SIZE)
-														.addGap(36)
-														.addComponent(radioButtonCustom4, GroupLayout.PREFERRED_SIZE,
-																164, GroupLayout.PREFERRED_SIZE)
+														.addGroup(layout.createParallelGroup(Alignment.LEADING)
+																.addGroup(layout.createSequentialGroup()
+																		.addComponent(radioButtonCustom3,
+																				GroupLayout.PREFERRED_SIZE, 139,
+																				GroupLayout.PREFERRED_SIZE)
+																		.addGap(36).addComponent(radioButtonCustom4,
+																				GroupLayout.PREFERRED_SIZE, 164,
+																				GroupLayout.PREFERRED_SIZE))
+																.addComponent(spinner1_1, GroupLayout.PREFERRED_SIZE,
+																		234, GroupLayout.PREFERRED_SIZE))
 														.addPreferredGap(ComponentPlacement.RELATED, 160,
 																Short.MAX_VALUE)
 														.addComponent(jsliderCustom2, GroupLayout.PREFERRED_SIZE, 18,
@@ -667,7 +686,10 @@ public class Test extends javax.swing.JFrame {
 												.addGap(34).addComponent(textAreaScroll1, GroupLayout.PREFERRED_SIZE,
 														142, GroupLayout.PREFERRED_SIZE)))
 								.addGap(90))
-						.addGroup(layout.createSequentialGroup().addContainerGap(418, Short.MAX_VALUE)
+						.addGroup(layout.createSequentialGroup().addGap(323)
+								.addComponent(spinner1_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+										GroupLayout.PREFERRED_SIZE)
+								.addPreferredGap(ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
 								.addComponent(vertical, GroupLayout.PREFERRED_SIZE, 251, GroupLayout.PREFERRED_SIZE)
 								.addGap(149)));
 
