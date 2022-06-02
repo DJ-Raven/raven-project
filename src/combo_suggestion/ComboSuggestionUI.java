@@ -14,6 +14,7 @@ import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.ListCellRenderer;
@@ -117,6 +118,10 @@ public class ComboSuggestionUI extends BasicComboBoxUI {
             ScrollBarCustom sb = new ScrollBarCustom();
             sb.setPreferredSize(new Dimension(12, 70));
             scroll.setVerticalScrollBar(sb);
+            ScrollBarCustom sbH = new ScrollBarCustom();
+            sbH.setOrientation(JScrollBar.HORIZONTAL);
+            scroll.setHorizontalScrollBar(sbH);
+            scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
             return scroll;
         }
     }
