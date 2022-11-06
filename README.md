@@ -1,5 +1,5 @@
 
-# Pack JMaterialDesign - Raven's Design
+# Pack JMaterialDesign
 
 ![Preview](previews/preview.png)
 
@@ -14,3 +14,5 @@
 ![Preview](previews/preview_6.gif)
 
 ![Preview](previews/preview_7.gif)
+
+[Lib](https://github.com/ComandPromt/LibMaterialDesign)
