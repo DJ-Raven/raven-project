@@ -25,11 +25,24 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/swingx-1.6.1.jar"/>
-	<classpathentry kind="lib" path="lib/jnativehook-2.1.0.jar"/>
-	<classpathentry kind="lib" path="lib/color_picker.jar"/>
-	<classpathentry kind="lib" path="lib/NefAnimacion_V2.1_jdk18.jar"/>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/JMaterial.jar"/>
 	<classpathentry kind="lib" path="lib/TimingFramework-0.55.jar"/>
-	<classpathentry kind="lib" path="lib/lib_material_design.jar"/>
+	<classpathentry kind="lib" path="lib/JMthos.jar"/>
+	<classpathentry kind="lib" path="lib/swingx-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/NefAnimacion_V2.1_jdk18.jar"/>
+	<classpathentry kind="lib" path="lib/miglayout-4.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
