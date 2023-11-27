@@ -34,7 +34,7 @@ public class SpinnerUI extends BasicSpinnerUI {
     @Override
     protected Component createPreviousButton() {
         ArrowButton cmd = new ArrowButton(false);
-        installNextButtonListeners(cmd);
+        installPreviousButtonListeners(cmd);
         return cmd;
     }
 
