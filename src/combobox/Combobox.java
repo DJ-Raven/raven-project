@@ -55,9 +55,13 @@ public class Combobox<E> extends JComboBox<E> {
     private Color lineColor = new Color(3, 155, 216);
     private boolean mouseOver;
 
-    public Combobox() {
-        setBackground(Color.WHITE);
-        setBorder(new EmptyBorder(15, 3, 5, 3));
+    @Override
+    public void updateUI() {
+        super.updateUI();
+        installUI();
+    }
+
+    private void installUI() {
         setUI(new ComboUI(this));
         setRenderer(new DefaultListCellRenderer() {
             @Override
@@ -70,6 +74,12 @@ public class Combobox<E> extends JComboBox<E> {
                 return com;
             }
         });
+    }
+
+    public Combobox() {
+        setBackground(Color.WHITE);
+        setBorder(new EmptyBorder(15, 3, 5, 3));
+        installUI();
     }
 
     private class ComboUI extends BasicComboBoxUI {
@@ -121,17 +131,23 @@ public class Combobox<E> extends JComboBox<E> {
             addPopupMenuListener(new PopupMenuListener() {
                 @Override
                 public void popupMenuWillBecomeVisible(PopupMenuEvent pme) {
-                    arrowButton.setBackground(new Color(200, 200, 200));
+                    if (arrowButton != null) {
+                        arrowButton.setBackground(new Color(200, 200, 200));
+                    }
                 }
 
                 @Override
                 public void popupMenuWillBecomeInvisible(PopupMenuEvent pme) {
-                    arrowButton.setBackground(new Color(150, 150, 150));
+                    if (arrowButton != null) {
+                        arrowButton.setBackground(new Color(150, 150, 150));
+                    }
                 }
 
                 @Override
                 public void popupMenuCanceled(PopupMenuEvent pme) {
-                    arrowButton.setBackground(new Color(150, 150, 150));
+                    if (arrowButton != null) {
+                        arrowButton.setBackground(new Color(150, 150, 150));
+                    }
                 }
             });
             TimingTarget target = new TimingTargetAdapter() {
