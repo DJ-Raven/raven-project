@@ -29,7 +29,9 @@
                   <Component id="spinner1" pref="280" max="32767" attributes="0"/>
                   <Component id="spinner2" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="440" max="32767" attributes="0"/>
+              <EmptySpace pref="242" max="32767" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -39,7 +41,10 @@
               <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
               <Component id="spinner1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="spinner2" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="spinner2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace pref="330" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -55,6 +60,14 @@
       <Properties>
         <Property name="labelText" type="java.lang.String" value="Spinner Test 1"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jButton1"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

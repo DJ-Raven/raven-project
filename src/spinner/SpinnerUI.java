@@ -5,6 +5,8 @@ import java.awt.Component;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JButton;
@@ -40,10 +42,27 @@ public class SpinnerUI extends BasicSpinnerUI {
 
     public class Editor extends TextField implements ChangeListener {
 
+        private final JSpinner spinner;
+
         public Editor(JSpinner spinner) {
+            this.spinner = spinner;
             spinner.addChangeListener(this);
-            setEditable(false);
+            //setEditable(false);
             setText("0");
+            addKeyListener(new KeyAdapter() {
+                @Override
+                public void keyReleased(KeyEvent e) {
+                    valueChnage();
+                }
+            });
+        }
+
+        private void valueChnage() {
+            try {
+                int value = Integer.parseInt(getText());
+                spinner.setValue(value);
+            } catch (NumberFormatException e) {
+            }
         }
 
         @Override
