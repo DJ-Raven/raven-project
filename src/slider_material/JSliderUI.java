@@ -65,7 +65,9 @@ public class JSliderUI extends BasicSliderUI {
             @Override
             public void stateChanged(ChangeEvent ce) {
                 panel.setValues(slider.getValue());
-                window.setLocation(getLocation(slider));
+                if (slider.isShowing()) {
+                    window.setLocation(getLocation(slider));
+                }
             }
         });
         animator = new Animator(200, new TimingTargetAdapter() {
